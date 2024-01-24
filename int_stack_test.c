@@ -77,6 +77,16 @@ void inserted_element_has_the_right_value() {
 	fprintf(stderr, "DONE!\n");
 }
 
+void inserted_elements_at_correct_place() {
+	fprintf(stderr, "Starting inserted_elements_at_correct_place()...");
+
+	stack s = stack_empty();
+
+	fprintf(stderr, "Cleaning up...");
+	stack_kill(s);
+	fprintf(stderr, "DONE!\n");
+}
+
 int main(void)
 {
 	empty_is_empty_test();
