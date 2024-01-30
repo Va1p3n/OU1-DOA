@@ -4,7 +4,7 @@
 #include <int_stack.h>
 
 /**
- * Test program to test implementations of int_stack
+ * Test program to test implementations of the datatype int_stack
  * 
  * Author: Felix Vallström (c23fvm)
  * 
@@ -15,7 +15,9 @@
 */
 
 /**
- * Compares two values stored in the stack.
+ * value_equal() - Compares two values stored in the stack.
+ * @v1: value (integer) 1
+ * @v2: value (integer) 2
  * 
  * Returns: True if the values are the same, otherwise false.
 */
@@ -54,7 +56,7 @@ void empty_is_empty_test() {
  * Returns: Nothing.
 */
 void one_element_in_stack_is_nonempty() {
-	fprintf(stderr, "Starting one_element_in_nonempty()...");
+	fprintf(stderr, "Starting one_element_in_stack_is_nonempty()...");
 
 	// Creates empty stack and pushes a value to it
 	stack s = stack_empty();
@@ -126,7 +128,7 @@ void read_top_test() {
 	if (value_equal(stack_top(s), val))
 	{
 		// Fails with error message
-		fprintf(stderr, "FAIL: Expected top() to return element at top but bottom element\n");
+		fprintf(stderr, "FAIL: Expected top() to return %d, got %d\n", val2, val);
 		stack_kill(s);
 		exit(EXIT_FAILURE);
 	}
@@ -174,6 +176,7 @@ void top_is_constant() {
 
 /**
  * inserted_elements_at_correct_place() - Tests wether stack_push() adds elements att wrong places.
+ * 		Also tests if pop removes more than one element, removes wrong element, does nothing.
  * 
  * Returns: Nothing.
 */
@@ -198,7 +201,7 @@ void inserted_elements_at_correct_place() {
 		if (!value_equal(values[(n - 1) - i], stack_top(s)))
 		{
 			// Fail with error message
-			fprintf(stderr, "FAIL: Expected top() element nr.%d to be %d, got %d\n", i+1, values[i], stack_top(s));
+			fprintf(stderr, "FAIL: Expected top() element nr.%d to be %d, got %d\n", i+1, values[(n - 1) - i], stack_top(s));
 			stack_kill(s);
 			exit(EXIT_FAILURE);
 		}
@@ -215,6 +218,7 @@ void inserted_elements_at_correct_place() {
 
 /**
  * inserted_too_many_values() - Test if stack_push adds to many values to the stack.
+ * 		Also catches if pop does not remove the last/only element in the stack.
  * 
  * Returns: nothing
 */

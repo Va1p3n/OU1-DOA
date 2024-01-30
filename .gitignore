@@ -52,3 +52,7 @@ Mkfile.old
 dkms.conf
 
 int_stack_test
+stack_test
+testrunner.c
+testrunner
+log.txt
