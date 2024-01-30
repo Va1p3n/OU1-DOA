@@ -108,9 +108,6 @@ void *stack_top(const stack *s)
  */
 void stack_kill(stack *s)
 {
-	while (!stack_is_empty(s)) {
-		s = stack_pop(s);
-	}
 	free(s);
 }
 
