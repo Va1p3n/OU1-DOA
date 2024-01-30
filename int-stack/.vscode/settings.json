@@ -3,6 +3,7 @@
 		"stdio.h": "c",
 		"int_stack.h": "c",
 		"stdlib.h": "c",
-		"stdbool.h": "c"
+		"stdbool.h": "c",
+		"util.h": "c"
 	}
 }
