@@ -12,8 +12,7 @@
                 "-I",
                 "~/edu/doa/code-base/datastructures-v1.0.14.3/include",
 				"-g",
-               // "~/edu/doa/code-base/datastructures-v1.0.14.3/src/stack/stack.c",
-			    "error-stacks/stack11.c",
+                "~/edu/doa/code-base/datastructures-v1.0.14.3/src/stack/stack.c",
                 "stack_test.c",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"

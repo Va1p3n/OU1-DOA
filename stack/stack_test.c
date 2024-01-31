@@ -14,10 +14,6 @@
  *   2024-01-XX: v1.0. First hand in
 */
 
-void print_f(const void* i) {
-	printf("%d", *((int*)i));
-}
-
 /**
  * value_equal() - Compares two values stored in the stack.
  * @v1: value (integer) 1
@@ -142,7 +138,7 @@ void one_element_is_non_empty() {
  * Returns: Nothing
 */
 void element_add_remove_empty() {
-	fprintf(stderr, "Started element_add_remove_empty()...");
+	fprintf(stderr, "Starting element_add_remove_empty()...");
 
 	// Create stack with value from value
 	int value[] = {42};
@@ -176,13 +172,9 @@ void inserted_too_many_values() {
 	// Create stack with element from value
 	int value[] = {42, 24};
 	stack *s = create_stack_with_elements(value, 2);
-
-	stack_print(s, print_f);
 	
 	//Removes the two added elements
 	s = stack_pop(stack_pop(s));
-
-	stack_print(s, print_f);
 
 	// stack_is_empty() should return true
 	if (!stack_is_empty(s))
@@ -205,7 +197,7 @@ void inserted_too_many_values() {
  * Returns: Nothing.
 */
 void removed_correct_element() {
-		fprintf(stderr, "Started removed_correct_element()...");
+		fprintf(stderr, "Starting removed_correct_element()...");
 
 	// Create stack with value from value
 	int value[] = {42, 24};
@@ -373,6 +365,8 @@ int main(void)
 	read_top_test();
 	top_is_constant();
 	inserted_elements_at_correct_place();
+
+	fprintf(stderr, "SUCCESS: Implementation passed all tests. Normal exit.\n");
 
 	return 0;
 }
