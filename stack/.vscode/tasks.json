@@ -8,10 +8,12 @@
                 "-fdiagnostics-color=always",
                 "-std=c99",
                 "-Wall",
+				"-Wextra",
                 "-I",
                 "~/edu/doa/code-base/datastructures-v1.0.14.3/include",
 				"-g",
-                "~/edu/doa/code-base/datastructures-v1.0.14.3/src/stack/stack.c",
+               // "~/edu/doa/code-base/datastructures-v1.0.14.3/src/stack/stack.c",
+			    "error-stacks/stack11.c",
                 "stack_test.c",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
