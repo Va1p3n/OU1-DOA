@@ -26,12 +26,12 @@ bool value_equal(int v1, int v2) {
 }
 
 /**
- * empty_is_empty_test() - Test that stack_empty is empty.
+ * empty_is_empty() - Test that stack_empty is empty.
  * 
  * Returns: Nothing.
 */
-void empty_is_empty_test() {
-	fprintf(stderr, "Starting empty_is_empty_test()...");
+void empty_is_empty() {
+	fprintf(stderr, "Starting empty_is_empty()...");
 
 	// Creates empty stack.
 	stack s = stack_empty();
@@ -124,11 +124,13 @@ void read_top_test() {
 	s = stack_push(s, val);
 	s = stack_push(s, val2);
 
+	int read_val = stack_top(s);
+
 	// Expects value_equal to be false.
-	if (value_equal(stack_top(s), val))
+	if (!value_equal(read_val, val2))
 	{
 		// Fails with error message
-		fprintf(stderr, "FAIL: Expected top() to return %d, got %d.\n", val2, val);
+		fprintf(stderr, "FAIL: Expected top() to return %d, got %d.\n", val2, read_val);
 		stack_kill(s);
 		exit(EXIT_FAILURE);
 	}
@@ -250,7 +252,7 @@ void inserted_too_many_values() {
 */
 int main(void)
 {
-	empty_is_empty_test();
+	empty_is_empty();
 	one_element_in_stack_is_nonempty();
 	inserted_element_has_the_right_value();
 	read_top_test();
