@@ -44,7 +44,7 @@ int *create_element(int i) {
  * 
  * Returns: A stack pointer
 */
-stack* create_stack_with_elements(int *values, int length) {
+stack* create_stack_with_elements(int values[], int length) {
 	stack *s = stack_empty(free);
 
 	for (int i = 0; i < length; i++)

@@ -11,7 +11,8 @@
  * Hand in date: 
  * 
  * Version:
- *   2024-01-XX: v1.0. First hand in
+ *   2024-02-01: v1.0. First hand in
+ * 	 2024-02-05: v2.0. Lixed line length
 */
 
 /**
@@ -203,7 +204,8 @@ void inserted_elements_at_correct_place() {
 		if (!value_equal(values[(n - 1) - i], stack_top(s)))
 		{
 			// Fail with error message
-			fprintf(stderr, "FAIL: Expected top() element nr.%d to be %d, got %d.\n", i+1, values[(n - 1) - i], stack_top(s));
+			fprintf(stderr, "FAIL: Expected top() element nr.%d to be %d, got %d.\n", i+1, 
+				values[(n - 1) - i], stack_top(s));
 			stack_kill(s);
 			exit(EXIT_FAILURE);
 		}
