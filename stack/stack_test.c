@@ -11,7 +11,8 @@
  * Hand in date: 
  * 
  * Version:
- *   2024-01-XX: v1.0. First hand in
+ *   2024-02-01: v1.0. First hand in
+ * 	 2024-02-05: v2.0. Changes to create_stack_with_elements parameter label.
 */
 
 /**
