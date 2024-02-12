@@ -1,3 +1,4 @@
 v.2.0
 Fixade till linjelängden i int_stack_test.c Funktionen create_stack_with_elements i stack.c har ändrad 
 parameter *values till values[].
+Fixade datum i filerna.
